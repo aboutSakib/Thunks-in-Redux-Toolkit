@@ -13,6 +13,7 @@
 
 // using reduc-toolkit
 import { configureStore } from "@reduxjs/toolkit";
+import { appApi } from "./features/appSlice";
 import { cartReducer } from "./reducers/cart";
 import { counterReducer } from "./reducers/counter";
 import { themeReducer } from "./reducers/theme";
@@ -23,7 +24,9 @@ const rootReducer = {
   theme: themeReducer,
   cart: cartReducer,
   todoState: todoSlice.reducer,
+  [appApi.reducerPath]: appApi.reducer,
 };
 export const store = configureStore({
   reducer: rootReducer,
+  middleware: (gM) => gM().concat(appApi.middleware),
 });

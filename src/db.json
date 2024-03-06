@@ -29,42 +29,5 @@
       "description": "Detils of Product 4"
     }
   ],
-  "todos": [
-    {
-      "userId": 1,
-      "id": 1,
-      "title": "delectus aut autem",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "id": 2,
-      "title": "quis ut nam facilis et officia qui",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "id": 3,
-      "title": "fugiat veniam minus",
-      "completed": false
-    },
-    {
-      "userId": 1,
-      "id": 4,
-      "title": "et porro tempora",
-      "completed": true
-    },
-    {
-      "id": 1709022611012,
-      "title": "sa"
-    },
-    {
-      "id": 1709023684463,
-      "title": "hello"
-    },
-    {
-      "id": 1709024013395,
-      "title": "sakib ahmed"
-    }
-  ]
+  "todos": []
 }
