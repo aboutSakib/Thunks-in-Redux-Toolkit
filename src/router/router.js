@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import AddProductForm from "../pages/AddProduct";
 import Cart from "../pages/Cart";
 import Root from "../pages/Root";
 import Shop from "../pages/Shop";
@@ -23,6 +24,7 @@ export const ourRouter = createBrowserRouter([
         path: "/todos",
         element: <Todos />,
       },
+      { path: "/add-product", element: <AddProductForm /> },
     ],
   },
 ]);

@@ -6,11 +6,19 @@ import "./index.css";
 import { ourRouter } from "./router/router";
 import { store } from "./store/index";
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
+const ourClient = new QueryClient();
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <RouterProvider router={ourRouter} />
-    </Provider>
+    <QueryClientProvider client={ourClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <Provider store={store}>
+        <RouterProvider router={ourRouter} />
+      </Provider>
+    </QueryClientProvider>
   </React.StrictMode>
 );

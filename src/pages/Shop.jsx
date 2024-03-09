@@ -1,14 +1,13 @@
-import { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
+import { useQuery } from "@tanstack/react-query";
 
 const Shop = () => {
-  const [products, setProducts] = useState([]);
+  const { data: products } = useQuery({
+    queryKey: ["products"],
+    queryFn: () =>
+      fetch(`http://localhost:5000/products`).then((res) => res.json()),
+  });
 
-  useEffect(() => {
-    fetch(`http://localhost:5000/products`)
-      .then((res) => res.json())
-      .then((data) => setProducts(data));
-  }, []);
   return (
     <div>
       <div className="page-banner">
@@ -27,7 +26,7 @@ const Shop = () => {
           </div>
           <div className="section__content">
             <div className="grid three">
-              {products.map((product) => (
+              {products?.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
