@@ -21,6 +21,15 @@ const Nav = () => {
             <li>
               <Link to="/add-product">Add Product</Link>
             </li>
+            <li>
+              <Link to="/Class-Components">Class Components</Link>
+            </li>
+            <li>
+              <Link to="/PostList">PostList</Link>
+            </li>
+            <li>
+              <Link to="/UserList">UserList</Link>
+            </li>
           </ul>
         </div>
       </div>
