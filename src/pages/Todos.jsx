@@ -26,7 +26,7 @@ const Todos = () => {
     useRemoveTodoMutation.mutate(todoId);
   };
   return (
-    <div>
+    <div className="todos">
       <form onSubmit={submitHandler}>
         <input
           type="text"
