@@ -16,12 +16,11 @@ export const modifyQunatityOfItem = (obj) => {
     payload: obj,
   };
 };
-export const clearCart=()=>{
+export const clearCart = () => {
   return {
     type: "cart/clearCart",
-
-  }
-}
+  };
+};
 
 // using reactTollkit
 // import { createAction } from "@reduxjs/toolkit";
